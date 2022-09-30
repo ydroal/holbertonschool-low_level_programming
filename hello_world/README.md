@@ -1,5 +1,4 @@
-
- World, C!
+# Hello World, C!
 
  This is the first project with C.
  Learning Objectives : knowing some of its bases.
