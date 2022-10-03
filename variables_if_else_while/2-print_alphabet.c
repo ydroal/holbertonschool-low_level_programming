@@ -2,8 +2,7 @@
 
 /**
   * main - Prints the alphabet in lowercase
-  * @char alphabet :loop counter variable
-
+  * @char alphabet: loop counter variable
   * Return: 0
   */
 
@@ -21,4 +20,3 @@ int main(void)
 
 	return (0);
 }
-
