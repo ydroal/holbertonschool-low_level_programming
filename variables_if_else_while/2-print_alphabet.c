@@ -2,19 +2,19 @@
 
 /**
   * main - Prints the alphabet in lowercase
-  * @char alphabet: loop counter variable
+  * @char cnt: loop counter variable
   * Return: 0
   */
 
 int main(void)
 {
-	char alphabet;
+	char cnt;
 
-	alphabet = 'a';
-	while (alphabet <= 'z')
+	cnt = 'a';
+	while (cnt <= 'z')
 	{
-		putchar(alphabet);
-		alphabet++;
+		putchar(cnt);
+		cnt++;
 	}
 	putchar('\n');
 
