@@ -2,7 +2,6 @@
 
 /**
   * main - Prints the alphabet in lowercase
-  * @char cnt: loop counter variable
   * Return: 0
   */
 
