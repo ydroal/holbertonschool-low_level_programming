@@ -3,10 +3,10 @@
 /**
   * print_sign - prints the sign of a number.
   * @n: number to be checked.
+  *
   * Description: prints '+' if n is greater than zero,'0' if n is zero
-  *             and '-' if n is less than zero.
-  * Return: 1 if n is greater than zero,0 if n is zero,
-  	   -1 if n is less than zero.
+  * and '-' if n is less than zero.
+  * Return: n is greater than zero 1, n is zero 0, n is less than zero -1.
   */
 int print_sign(int n)
 {
