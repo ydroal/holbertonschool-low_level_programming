@@ -26,8 +26,11 @@ void times_table(void)
 				_putchar(' ');
 				_putchar((row * column) + '0');
 			}
+			if (column != 9)
+			{
 				_putchar(',');
 				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
