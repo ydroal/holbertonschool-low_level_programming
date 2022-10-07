@@ -23,7 +23,8 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(' ');
+				if (column != 0)
+					_putchar(' ');
 				_putchar((row * column) + '0');
 			}
 			if (column != 9)
