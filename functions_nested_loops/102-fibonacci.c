@@ -14,9 +14,9 @@ int main(void)
 	long fx;
 
 	printf("%ld", f1);
-	while (i < 50 - 2)
-	{	
-		if (i != 50)
+	while (i < 50 - 1)
+	{
+		if (i != 49)
 			printf(", ");
 		printf("%ld", f2);
 		fx = f2 + f1;
