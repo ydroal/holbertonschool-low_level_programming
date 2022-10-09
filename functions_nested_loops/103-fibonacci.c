@@ -12,10 +12,10 @@ int main(void)
 {
 	int f1 = 1;
 	int f2 = 2;
-	long sum = 0;
+	long sum = 2;
 	long fx;
 
-	while (f2 < 4000000)
+	while (f2 <= 4000000)
 	{
 		fx = f2 + f1;
 		f1 = f2;
