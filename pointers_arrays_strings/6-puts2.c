@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
-  * puts2 - prints every other character of a string,
-  * starting with the first character.
+  * _strlen - returns the length of a string. 
   *
-  * @str: string to be printed.
-  * Return: void
+  * @s: string to be counted its length.
+  * Return: the length of a string.
   */
 
 int _strlen(char *s)
@@ -16,6 +15,14 @@ int _strlen(char *s)
 		i++;
 	return (i);
 }
+
+/**
+  * puts2 - prints every other character of a string,
+  * starting with the first character.
+  *
+  * @str: string to be printed.
+  * Return: void
+  */
 
 void puts2(char *str)
 {
