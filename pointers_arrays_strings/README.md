@@ -1,4 +1,4 @@
-# C - More functions, more nested loops
+# C - Pointers, arrays and strings
 
 This is the project with C.
 learn about pointers, arrays.
