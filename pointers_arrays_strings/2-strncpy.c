@@ -1,11 +1,12 @@
 #include "main.h"
 /**
   * _strncpy - copy at most len characters from src into dst.
-  * If src is less than len characters long, 
+  * If src is less than len characters long,
   * the remainder of dst is filled with ‘\0’
   *
   * @dest: destination
   * @src: string to be copied
+  * @n: size to copy
   * Return: the pointer to dest
   */
 
