@@ -23,6 +23,7 @@ int _strlen(char *s)
   *
   * @dest: destination
   * @src: string to be copied
+  * @n: size to concatenantes
   * Return: the pointer to dest
   */
 
