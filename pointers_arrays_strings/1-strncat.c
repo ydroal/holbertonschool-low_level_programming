@@ -17,7 +17,7 @@ int _strlen(char *s)
 
 /**
   * _strncat - concatenates two strings.
-  * it will use at most n bytes from src and 
+  * it will use at most n bytes from src and
   * src does not need to be null-terminated
   * if it contains n or more bytes.
   *
