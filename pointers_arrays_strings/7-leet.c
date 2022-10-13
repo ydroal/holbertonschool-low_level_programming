@@ -13,20 +13,19 @@
 char *leet(char *str)
 {
 	int i = 0;
+	char trgt[5] = {'a', 'e', 'o', 't', 'l'};
+	char src[5] = {'4', '3', '0', '7', '1'};
+	char *r;
 
-	while (str[i] != '\0')
+	r = str;
+	while (*r)
 	{
-		if (str[i] == 'a' || str[i] == 'A')
-			str[i] = '4';
-		if (str[i] == 'e' || str[i] == 'E')
-			str[i] = '3';
-		if (str[i] == 'o' || str[i] == 'O')
-			str[i] = '0';
-		if (str[i] == 't' || str[i] == 'T')
-			str[i] = '7';
-		if (str[i] == 'l' || str[i] == 'L')
-			str[i] = '1';
-		i++;
+		for (i = 0; i < 5; i++)
+		{
+			if (*r == trgt[i] || *r == trgt[i - 32])
+				*r = src[i];
+		}
+		r++;
 	}
-	return (str);
+	return (r);
 }
