@@ -13,8 +13,8 @@
 char *leet(char *str)
 {
 	int i = 0;
-	char trgt[5] = {'a', 'e', 'o', 't', 'l'};
-	char src[5] = {'4', '3', '0', '7', '1'};
+	char trgt[ ] = {'a', 'e', 'o', 't', 'l'};
+	char src[ ] = {'4', '3', '0', '7', '1'};
 	char *r;
 
 	r = str;
@@ -22,7 +22,7 @@ char *leet(char *str)
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (*r == trgt[i] || *r == trgt[i - 32])
+			if (*r == trgt[i] || *r == trgt[i] - 32)
 				*r = src[i];
 		}
 		r++;
