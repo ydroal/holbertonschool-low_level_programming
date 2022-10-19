@@ -6,7 +6,8 @@
   *
   * @argc: number of command line arguments
   * @argv: An array containing the program command line arguments
-  * Return: Always 0
+  * Return: 0 - program executed successfully
+  *	    1 - If the program does not receive two arguments
   */
 
 int main(int argc, char *argv[])
