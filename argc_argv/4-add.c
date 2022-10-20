@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-  * main - prints its name
+  * main - adds positive numbers.
   *
   * @argc: number of command line arguments
   * @argv: An array containing the program command line arguments
