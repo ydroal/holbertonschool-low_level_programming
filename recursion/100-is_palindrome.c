@@ -28,7 +28,7 @@ int isPalindrome(char *s, int head, int tail)
 {
 	if (s[head] != s[tail])
 		return (0);
-	if (head < tail / 2 && s[head] == s[tail])
+	if (head <= tail / 2 && s[head] == s[tail])
 		return (isPalindrome(s, head + 1, tail - 1));
 
 	return (1);
