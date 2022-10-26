@@ -1,7 +1,7 @@
 # C - More malloc, free
 
 This is the project with C.
-learn about Automatic and dynamic allocation, malloc, calloc et realloc aussi.
+learn about Automatic and dynamic allocation, malloc, calloc et realloc too.
 
 ## General 
 
