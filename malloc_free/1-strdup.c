@@ -9,7 +9,7 @@
 
 int _strlen(char *s)
 {
-	int i;
+	int i = 0;
 
 	while (s[i] != '\0')
 		i++;
@@ -38,6 +38,6 @@ char *_strdup(char *str)
 		return (NULL);
 	for (i = 0; i < len ; i++)
 		dup[i] = str[i];
+	dup[i] = '\0';
 	return (dup);
-	free(dup);
 }
