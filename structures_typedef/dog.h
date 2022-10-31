@@ -1,11 +1,14 @@
 #ifndef _DOG_H_
 #define _DOG_H_
+
 /**
-  * File: dog.h
-  * Auth: Yoko ONO
-  *
-  * Header file containing the type definition for this task.
-  */
+ * struct dog - data of dog
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: name of dog's owner
+ *
+ * Description: Longer description
+ */
 struct dog
 {
 	char *name;
