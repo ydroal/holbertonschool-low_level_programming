@@ -4,7 +4,7 @@
  *
  * @array: array of integer
  * @size: size of the array
- * @action: pointer to the function to use
+ * @cmp: pointer to the function to use
  * Return: index of the first element for which
  *         the cmp function does not return 0
  */
@@ -24,5 +24,5 @@ int int_index(int *array, int size, int (*cmp)(int))
 		}
 		return (-1);
 	}
-	return (0);
+	return (-1);
 }
