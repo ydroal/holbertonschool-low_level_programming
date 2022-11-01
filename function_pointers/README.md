@@ -15,7 +15,7 @@ learn about Function pointer.
 
 0-Write a function that prints a name.
 
-File: 0-print_name.c 
+File: [0-print_name.c](https://github.com/ydroal/holbertonschool-low_level_programming/blob/master/function_pointers/0-print_name.c) 
 
 
 1-Write a function that executes a function given as a parameter on each element of an array.
@@ -24,7 +24,7 @@ File: 0-print_name.c
 * where size is the size of the array
 * and action is a pointer to the function you need to use
 
-File: 1-array_iterator.c
+File: [1-array_iterator.c](https://github.com/ydroal/holbertonschool-low_level_programming/blob/master/function_pointers/1-array_iterator.c)
 
 2-Write a function that searches for an integer.
 
@@ -35,7 +35,7 @@ File: 1-array_iterator.c
 * If no element matches, return -1
 * If size <= 0, return -1
 
-File: 2-int_index.c
+File: [2-int_index.c](https://github.com/ydroal/holbertonschool-low_level_programming/blob/master/function_pointers/2-int_index.c)
 
 
 3-Write a program that performs simple operations.
@@ -54,8 +54,8 @@ File: 2-int_index.c
 * if the number of arguments is wrong, print Error, followed by a new line, and exit with the status 98
 * if the operator is none of the above, print Error, followed by a new line, and exit with the status 99
 * if the user tries to divide (/ or %) by 0, print Error, followed by a new line, and exit with the status 100
-
 This task requires that you create four different files.
+
 File: 3-main.c, 3-op_functions.c, 3-get_op_func.c, 3-calc.h
 
 
