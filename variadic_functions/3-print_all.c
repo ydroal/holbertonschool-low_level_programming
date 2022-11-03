@@ -28,18 +28,19 @@ int _strlen(const char *s)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	const char *p;
+	char type;
 	char *tmp;
 	int len;
 	int i = 0;
 
-	p = format;
-	len = _strlen(p);
+	len = _strlen(format);
 	va_start(ap, format);
 
-	while (*p != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
-		switch (*p)
+		type = format[i];
+
+		switch (type)
 		{
 			case 'c':
 				printf("%c", va_arg(ap, int));
@@ -48,7 +49,7 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(ap, int));
 				break;
 			case 'f':
-				printf("%g", va_arg(ap, double));
+				printf("%f", va_arg(ap, double));
 				break;
 			case 's':
 				tmp = va_arg(ap, char*);
@@ -57,9 +58,9 @@ void print_all(const char * const format, ...)
 				printf("%s", tmp);
 				break;
 		}
-		if ((*p == 'c' || *p == 'i' || *p == 's' || *p == 'f') && i != len - 1)
+		if ((type == 'c' || type == 'i' || type == 's' || type == 'f')
+		   && i != len - 1)
 		printf(", ");
-		p++;
 		i++;
 	}
 	printf("\n");
