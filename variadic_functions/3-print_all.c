@@ -33,13 +33,12 @@ void print_all(const char * const format, ...)
 	int len;
 	int i = 0;
 
-	len = _strlen(format);
 	va_start(ap, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
 		type = format[i];
-
+		len = _strlen(format);
 		switch (type)
 		{
 			case 'c':
@@ -54,7 +53,7 @@ void print_all(const char * const format, ...)
 			case 's':
 				tmp = va_arg(ap, char*);
 				if (tmp == NULL)
-					printf("(nil)");
+					tmp = "(nil)";
 				printf("%s", tmp);
 				break;
 		}
