@@ -54,8 +54,7 @@ void print_all(const char * const format, ...)
 				tmp = va_arg(ap, char*);
 				if (tmp == NULL)
 					printf("(nil)");
-				else
-					printf("%s", tmp);
+				printf("%s", tmp);
 				break;
 		}
 		if ((*p == 'c' || *p == 'i' || *p == 's' || *p == 'f') && i != len - 1)
