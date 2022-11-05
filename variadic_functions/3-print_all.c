@@ -1,20 +1,58 @@
-#include <stdarg.h>
 #include <stdio.h>
 #include "variadic_functions.h"
 
 /**
- * _strlen - returns the length of a string.
+ * print_char - print char
  *
- * @s: string to be counted its length.
- * Return: the length of a string.
+ * @ap: list of variadic arguments
+ * Return: Nothing
  */
-int _strlen(const char *s)
-{
-	int i = 0;
 
-	while (s[i] != '\0')
-		i++;
-	return (i);
+void print_char(va_list ap)
+{
+	printf("%c", va_arg(ap, int));
+}
+
+/**
+ * print_int - print integer
+ *
+ * @ap: list of variadic arguments
+ * Return: Nothing
+ */
+
+void print_int(va_list ap)
+{
+	printf("%d", va_arg(ap, int));
+}
+
+/**
+ * print_float - print float
+ *
+ * @ap: list of variadic arguments
+ * Return: Nothing
+ */
+
+void print_float(va_list ap)
+{
+	printf("%f", va_arg(ap, double));
+}
+
+/**
+ * print_float - print float
+ *
+ * @ap: list of variadic arguments
+ * Return: Nothing
+ */
+
+void print_string(va_list ap)
+{
+	char *tmp;
+
+	tmp = va_arg(ap, char*);
+
+	if (tmp == NULL)
+		tmp = "(nil)";
+	printf("%s", tmp);
 }
 
 /**
@@ -28,38 +66,32 @@ int _strlen(const char *s)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	char type;
-	char *tmp;
-	int len;
-	int i = 0;
+	int i, j;
+	char *sep = "";
+
+	print_t p_type[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string}
+	};
 
 	va_start(ap, format);
-
+	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
-		type = format[i];
-		len = _strlen(format);
-		switch (type)
+		j = 0;
+		while (j < 4)
 		{
-			case 'c':
-				printf("%c", va_arg(ap, int));
+			if (format[i] == *p_type[j].c)
+			{
+				printf("%s", sep);
+				p_type[j].f(ap);
+				sep = ", ";
 				break;
-			case 'i':
-				printf("%d", va_arg(ap, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(ap, double));
-				break;
-			case 's':
-				tmp = va_arg(ap, char*);
-				if (tmp == NULL)
-					tmp = "(nil)";
-				printf("%s", tmp);
-				break;
+			}
+			j++;
 		}
-		if ((type == 'c' || type == 'i' || type == 's' || type == 'f')
-		   && i != len - 1)
-		printf(", ");
 		i++;
 	}
 	printf("\n");
