@@ -38,7 +38,7 @@ void print_float(va_list ap)
 }
 
 /**
- * print_float - print float
+ * print_string - print string
  *
  * @ap: list of variadic arguments
  * Return: Nothing
