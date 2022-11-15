@@ -36,7 +36,10 @@ list_t *add_node(list_t **head, const char *str)
 
 	tmp = strdup(str);
 	if (tmp == NULL)
-		free(tmp);
+	{
+		free(new);
+		return (NULL);
+	}
 
 	new->str = tmp;
 	new->len = _strlen(tmp);
