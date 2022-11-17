@@ -5,6 +5,7 @@
   *
   * @head: double pointer to listint_t list
   * @idx: the index of the list where the new node should be added.
+  * @n: the integer to set to new node
   * Return: the address of the new node, or NULL if it failed
   */
 
@@ -15,7 +16,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int i;
 
 	i = 0;
-	if (head == NULL)
+	if (head == NULL && idx != 0)
 		return (NULL);
 
 	new = malloc(sizeof(listint_t));
@@ -30,8 +31,19 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		i++;
 	}
 
-	new->next = node->next;
-	node->next = new;
+	if (node->next == NULL)
+		return (NULL);
 
-	return (new);
+	else if (idx == 0)
+	{
+		new->next = *head;
+		*head = new;
+		return (new);
+	}
+	else
+	{
+		new->next = node->next;
+		node->next = new;
+		return (new);
+	}
 }
