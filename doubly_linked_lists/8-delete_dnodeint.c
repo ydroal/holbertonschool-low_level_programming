@@ -61,11 +61,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		free(node->next);
 		node->next = NULL;
+		return (1);
 	}
-
 	next = node->next->next;
-	node->next = next;
 	free(node->next);
+	node->next = next;
 	next->prev = node;
 	return (1);
 }
