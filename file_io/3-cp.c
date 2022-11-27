@@ -32,17 +32,18 @@ int main(int argc, char *argv[])
 	while ((r = read(fd_f, buff, 1024)) > 0)
 	{
 		w = write(fd_t, buff, r);
-		if (r == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
 		if (w < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+
 	if (close(fd_f) == -1 || close(fd_t) == -1)
 	{
 		if (close(fd_f) == -1)
