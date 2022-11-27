@@ -20,18 +20,23 @@ int main(int argc, char *argv[])
 	fd_f = open(argv[1], O_RDONLY);
 	if (fd_f == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
-		exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	fd_t = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_t == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	while ((r = read(fd_f, buff, 1024)) > 0)
 	{
 		w = write(fd_t, buff, r);
+		if (r == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 		if (w < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
