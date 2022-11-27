@@ -26,17 +26,14 @@ int main(int argc, char *argv[])
 	}
 
 	fd_t = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	r = read(fd_f, buff, 1024);
-	if (r == -1)
+	while ((r = read(fd_f, buff, 1024)) > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	w = write(fd_t, buff, r);
-	if (fd_t == -1 || w < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		w = write(fd_t, buff, r);
+		if (fd_t == -1 || w < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 
 	if (close(fd_f) == -1 || close(fd_t) == -1)
