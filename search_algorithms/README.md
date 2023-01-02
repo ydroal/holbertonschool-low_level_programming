@@ -1,7 +1,7 @@
 # C - Search Algorithms
 
 This is the project with C.
-learn about Search Algorithms..
+learn about Search Algorithms.
 
 
 ## General
@@ -12,7 +12,7 @@ learn about Search Algorithms..
 * What is the best search algorithm to use depending on your needs
 
 ## Tasks
-0- Write a function that searches for a value in an array of integers using the Linear search algorithm
+__0- Write a function that searches for a value in an array of integers using the Linear search algorithm__
 
 * Prototype : int linear_search(int \*array, size_t size, int value);
 * Where array is a pointer to the first element of the array to search in
@@ -24,7 +24,7 @@ learn about Search Algorithms..
 
 File: 0-linear.c
 
-1- Write a function that searches for a value in a sorted array of integers using the Binary search algorithm
+__1- Write a function that searches for a value in a sorted array of integers using the Binary search algorithm__
 
 * Prototype : int binary_search(int \*array, size_t size, int value);
 * Where array is a pointer to the first element of the array to search in
@@ -38,23 +38,23 @@ File: 0-linear.c
 
 File: 1-binary.c
 
-2- What is the time complexity (worst case) of a linear search in an array of size n?
+__2- What is the time complexity (worst case) of a linear search in an array of size n?__
 
 File: 2-O
 
-3- What is the space complexity (worst case) of an iterative linear search algorithm in an array of size n?
+__3- What is the space complexity (worst case) of an iterative linear search algorithm in an array of size n?__
 
 File: 3-O
 
-4- What is the time complexity (worst case) of a binary search in an array of size n?
+__4- What is the time complexity (worst case) of a binary search in an array of size n?__
 
 File: 4-O
 
-5- What is the space complexity (worst case) of a binary search in an array of size n?
+__5- What is the space complexity (worst case) of a binary search in an array of size n?__
 
 File: 5-O
 
-6- What is the space complexity of this function / algorithm?
+__6- What is the space complexity of this function / algorithm?__
 
 File: 6-O
 
