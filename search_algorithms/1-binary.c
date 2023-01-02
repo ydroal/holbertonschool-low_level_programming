@@ -43,7 +43,10 @@ int  search_recursion(int *array, int low, int hight, int value)
 	{
 		mid = low + (hight - low) / 2;
 		if (array[mid] == value)
+		{
+			print_array(array, low, hight);
 			return (mid);
+		}
 
 		if (array[mid] > value)
 		{
